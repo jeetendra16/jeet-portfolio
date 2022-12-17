@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.2.2-dist/css/owl.carousel.min.css"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .header_wrapper .navbar {
+        background-color: #1f1f1f;
+      }
+      .nav-link {
+        color: #8e8e8e;
+      }
+      .nav-item {
+        font-size: 24px;
+        font-weight: bolder;
+      }
+      .carousel-caption {
+        bottom: 11.25rem;
+      }
+
+      #slider {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        /* height: 500px; */
+        background-image: url(images/newbackg.jpg);
+      }
+      .owl-carousel {
+        display: block;
+      }
+      .image img {
+        width: 100%;
+        border-radius: 5%;
+      }
+
+      .owl-nav .owl-next {
+        position: absolute;
+
+        top: 50%;
+        right: 0;
+        opacity: 1;
+        font-size: 30px !important;
+        z-index: 1;
+      }
+      .owl-nav .owl-prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        opacity: 1;
+        font-size: 30px !important;
+        z-index: 1;
+      }
+      /* .owl-carousel .owl-dots  .owl-dot{
+
+  background-color: #1f1f1f;
+  opacity: 1;
+  font-size: 30px !important;
+}
+.owl-carousel .owl-dots {
+ 
+  position: absolute;
+  bottom: 10%;
+  z-index: 999;
+  width: 100%;
+  background-color: #D9D9D9;
+  text-align: center;
+
+} */
+      .slider-card {
+        border: solid yellow 2px;
+        border-radius: 10px;
+        opacity: 0.7;
+      }
+      .slider {
+        height: 500px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .slider .owl-item.active.center .slider-card {
+        transform: scale(1.15);
+        border: 3px solid rgb(247, 0, 255);
+
+        opacity: 1;
+      }
+
+      .owl-stage-outer {
+        padding-top: 5%;
+      }
+      .nav-pills .nav-link.active,
+      .nav-pills .show > .nav-link {
+        background-color: #4d4d4d;
+        color: #fff;
+        border: 2px solid #fff50a;
+      }
+      .nav-link:focus,
+      .nav-link:hover {
+      }
+      .tab-content ul li,
+      p {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #4d4d4d;
+        font-weight: 600;
+      }
+      .navbar-toggler {
+        color: #fff;
+      }
+      .navbar {
+        --bs-navbar-hover-color: rgb(225, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="header_wrapper sticky-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand text-secondary mx-auto fs-2 fw-semibold"
+            href="#"
+            ><img
+              src="https://www.nsbpictures.com/wp-content/uploads/2019/11/logo-icon-png-8.png"
+              alt="Logo"
+              width="47"
+              height="40"
+              class="d-inline-block align-text-top"
+            />
+            LOGO</a
+          >
+          <button
+            class="navbar-toggler border border-2 border-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-5">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  style="color: rgb(225, 255, 0)"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mx-5">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item mx-5">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item mx-5">
+                <a class="nav-link" href="#">Service</a>
+              </li>
+              <li class="nav-item mx-5 dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Contact Us
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">91+ 9399722301</a></li>
+                  <li><a class="dropdown-item" href="#">E-mail</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >jeetendarthakur123<br />@ gmail.com
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="row d-none d-lg-block">
+            <span class="col-6 fs-4"
+              ><a href=""><i class="fa-brands fa-twitter text-warning"></i></a
+            ></span>
+            <span class="col-6 fs-4"
+              ><a href=""><i class="fa-brands fa-instagram text-warning"></i></a
+            ></span>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <div class="container-fluid g-0">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="false"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="text fst-italic">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptatem mollitia dolor debitis iusto illo rem?
+                </h1>
+                <button class="btn btn-lg btn-warning fw-semibold my-5">
+                  Explore More
+                </button>
+              </div>
+              <img src="images/s1.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="text fst-italic">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptatem mollitia dolor debitis iusto illo rem?
+                </h1>
+                <button class="btn btn-lg btn-warning fw-semibold my-5">
+                  Explore More
+                </button>
+              </div>
+              <img src="images/s2.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="text fst-italic">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptatem mollitia dolor debitis iusto illo rem?
+                </h1>
+                <button class="btn btn-lg btn-warning fw-semibold my-5">
+                  Explore More
+                </button>
+              </div>
+              <img src="images/s3.jpg" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- about arena -->
+      <div class="row">
+        <div class="col-12 fs-2" style="text-align: center">
+          ABOUT ARENA GBS
+        </div>
+        <div class="col-12 p-5 text-light bg-dark">
+          Arena Animation located at Geeta Bhawan Square, Indore is a Centre for
+          Excellence in the field of Media & Entertainment Since 1997. It is
+          Pioneer, Leader and Trendsetter of Vocational Training in Central
+          India with specific focus on Design, Media & Entertainment. It has
+          trained & placed thousands of Students in past 24+ years. Apart from
+          200+ laurels, it has been rated as Central India’s Best Institute in
+          Digital Media & Animation.<br />
+          Arena Animation is the educational arm of Aptech Limited which has
+          over three decades of proven track record with presence in 40+
+          countries. It places a great emphasis on providing world-class
+          education. It offers creative and technical skills in Digital Media
+          covering - Design & Visual Communication, Animation & Visual Effects,
+          Gaming, Web & Multimedia. Arena Geeta Bhawan, Indore also provides
+          value addition to skilling by offering Advanced skill certification,
+          Government Certified Skill Programs endorsed by Media & Entertainment
+          skills council. All Courses are fully Job oriented and leads to
+          Employment, Freelancing as well as Self-Employment
+        </div>
+      </div>
+      <!-- slider -->
+      <div class="col-12 fs-2" style="text-align: center">MEET OUR MENTORS</div>
+      <section id="slider" class="col-12">
+        <div class="container">
+          <p
+            class="text text-light fs-5 align-items-center"
+            style="text-align: center"
+          >
+            A CROSS FUNCTIONAL TEAM OF INDUSTRY EXPERTS AS CERTIFIED FACULTY
+          </p>
+          <div class="slider h-75">
+            <div class="owl-carousel ps-5 pe-4 d-flex" style="height: 600px">
+              <!-- card 1 -->
+
+              <div class="slider-card col-11">
+                <div class="image col-6 mx-auto">
+                  <img src="images/avtar5.jpg" alt="" />
+                  <div class="col-12 m-2 text-light fw-semibold fs-4">
+                    Bavita ji
+                    <p class="text-light fs-6">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 2 -->
+              <div class="slider-card col-11">
+                <div class="image col-6 mx-auto">
+                  <img src="images/avtar6.jpg" alt="" />
+                  <div class="col-12 m-2 text-light fw-semibold fs-4">
+                    Kallu Bhaiya
+                    <p class="text-light fs-6">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 3 -->
+              <div class="slider-card col-11">
+                <div class="image col-6 mx-auto">
+                  <img src="images/avtar3.jpg" alt="" />
+                  <div class="col-12 m-2 text-light fw-semibold fs-4">
+                    Savita ji
+                    <p class="text-light fs-6">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 4 -->
+              <div class="slider-card col-11">
+                <div class="image col-6 mx-auto">
+                  <img src="images/avtar4.jpg" alt="" />
+                  <div class="col-12 m-2 text-light fw-semibold fs-4">
+                    Chhutki
+                    <p class="text-light fs-6">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 5 -->
+
+              <div class="slider-card col-11">
+                <div class="image col-6 mx-auto">
+                  <img src="images/avtar 1.jpg" alt="" />
+                  <div class="col-12 m-2 text-light fw-semibold fs-4">
+                    Babu Bhaiya
+                    <p class="text-light fs-6">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 6 -->
+
+              <div class="slider-card col-11">
+                <div class="image col-6 mx-auto">
+                  <img src="images/avtar 2.jpg" alt="" />
+                  <div class="col-12 m-2 text-light fw-semibold fs-4">
+                    Chetan
+                    <p class="text-light fs-6">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- WELCOME TO OUR ACCADEMY -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="col-lg-4 col-sm-6 my-4 col-12 mx-auto bg-dark text-light fs-4"
+              style="text-align: center"
+            >
+              WELCOME TO OUR ACCEDEMY
+            </div>
+          </div>
+          <div class="col-12 pt-2" style="background-color: #d9d9d9">
+            <!-- tabs -->
+            <ul
+              class="nav nav-pills mb-3 justify-content-center"
+              id="pills-tab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                >
+                  Vision
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  Mission
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pills-contact-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                >
+                  Values
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active px-sm-5"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+                tabindex="0"
+              >
+                <ul>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure sequi rerum sint,
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure sequi rerum sint
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure sequi rerum sint
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure sequi rerum sint
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="tab-pane fade px-sm-5"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+                tabindex="0"
+              >
+                <p>
+                  Donec non elit elementum lacus molestie lacinia. Mauris luctus
+                  purus a lorem bibendum, vel porta quam mollis. Aenean mollis
+                  dapibus mauris, vel ullamcorper nisl egestas nec. Sed augue
+                  tellus, tempus scelerisque eros quis, varius convallis dui. Ut
+                  at blandit erat, mollis accumsan nulla. Duis vitae efficitur
+                  mauris. Donec pharetra, libero sit amet blandit ultricies,
+                  metus metus elementum mi, a ornare nisl felis et dui.
+                  Vestibulum eu dignissim enim. Sed urna tellus, ullamcorper id
+                  laoreet sit amet, aliquet a enim. Nulla facilisi. Phasellus
+                  semper lacus et faucibus facilisis. Donec maximus, mi ac
+                  ultrices gravida, diam risus semper magna, sed fringilla diam
+                  sapien id turpis. Sed in risus et ligula commodo consectetur.
+                  In nunc neque, suscipit ut leo in, convallis interdum ligula.
+                  Cras vel lectus nunc. Duis rutrum ante ac enim viverra, nec
+                  mollis lacus consectetur.
+                </p>
+              </div>
+              <div
+                class="tab-pane fade px-sm-5"
+                id="pills-contact"
+                role="tabpanel"
+                aria-labelledby="pills-contact-tab"
+                tabindex="0"
+              >
+                <p>
+                  Fusce lobortis magna eget justo sagittis cursus. Fusce quis
+                  lorem a felis egestas feugiat dignissim eget lacus. Vivamus
+                  iaculis quis tortor nec vestibulum. Sed non velit et risus
+                  dignissim luctus nec ullamcorper est. Cras rutrum justo ut
+                  nulla dictum finibus. Nullam sollicitudin accumsan commodo.
+                  Aenean diam justo, imperdiet eget efficitur sed, fermentum
+                  vulputate justo. Sed venenatis nunc blandit euismod pharetra.
+                  Pellentesque tortor enim, ullamcorper at ligula non, finibus
+                  venenatis justo. Sed odio nulla, sagittis ut volutpat ac,
+                  laoreet quis nibh. Nulla convallis ex vitae convallis
+                  scelerisque. Suspendisse bibendum justo ut volutpat suscipit.
+                  Donec sit amet congue ante, ut porttitor odio. Phasellus
+                  laoreet lorem at metus rutrum ornare. Class aptent taciti
+                  sociosqu ad litora torquent per conubia nostra, per inceptos
+                  himenaeos. Praesent eget porttitor leo
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-warning mt-3 bg-gradient p-5">
+        <div class="col-lg-8 col-12">
+          <h1>Why Arena GBS?</h1>
+          <p class="p pt-3">
+            Praesent eu turpis sit amet erat sollicitudin tempus tempus vitae
+            mauris. Nulla nec luctus magna. Proin et neque gravida, iaculis
+            magna et, feugiat nisi. Nunc tempor sed diam sit amet molestie.
+            Mauris mattis eros eu ex semper, et mollis risus pulvinar. Duis
+            placerat augue a placerat feugiat. Fusce suscipit leo vitae quam
+            semper tempus<br />Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Doloribus hic cupiditate explicabo illum, suscipit
+            perspiciatis vel veniam earum minus impedit enim voluptatum nihil
+            ipsa odio ut delectus fuga ipsam temporibus!
+          </p>
+        </div>
+        <div class="col-lg-4 col-12 bg-dark">
+          <img src="images/arena.png" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-bg-dark p-sm-4">
+          <h1>About Directer Sir</h1>
+          <p class="p text-light">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <div class="col-12 d-lg-flex d-sm-block overflow-hidden p-sm-3">
+          <div class="col-sm-4 col-12">
+            <img src="images/directer.jpg" alt="" />
+          </div>
+          <div class="col-sm-7 col-12 text-dark fs-5 fw-semibold fst-italic">
+            Curabitur augue elit, interdum eu tincidunt at, posuere non turpis.
+            Aenean ut aliquet erat, viverra dapibus enim. Pellentesque vulputate
+            nisl quam, eu posuere lectus consequat nec. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Aliquam tincidunt dapibus dui, vitae egestas est lacinia
+            a. Pellentesque efficitur tristique orci eu euismod. Fusce nulla
+            metus, posuere nec purus eget, vulputate imperdiet neque. Aenean in
+            lectus sem. Aenean porttitor, nunc sed sollicitudin viverra, ante
+            justo elementum ligula, eget interdum risus purus at purus.
+            Curabitur feugiat sed nulla vitae ornare. Duis eu facilisis risus,
+            sed eleifend ex. Suspendisse eget orci id orci sagittis dignissim.
+            Morbi scelerisque rutrum ex, et vehicula risus sagittis a. Duis
+            luctus est tortor, quis dapibus libero blandit eu. Nullam a dapibus
+            dolor. Etiam scelerisque tristique leo, ac maximus quam auctor ac.
+          </div>
+        </div>
+      </div>
+      <footer class="row p-lg-2" style="background-color: #1f1f1f">
+        <div class="col-lg-3 p-4 text-light fw-semibold">
+          <h3>
+            Arena Animation<br />
+            Geeta Bhawan<br />
+            Squre
+          </h3>
+          <p class="text text-warning fs-5 fst-italic">
+            We looking forward to<br />
+            hearing from you
+          </p>
+        </div>
+        <div class="col-lg-3 p-4 text-light">
+          <i class="fa-solid fa-location-dot text-warning fs-3"></i> 202,Apollo
+          Tread Center, 2-B rajesh kothi,AB road Geeta Bhawan squre indore
+          Madhya Pradesh-452001 india<br /><br />
+          <i class="fa-solid fa-phone text-warning fs-3"></i>
+          0731-24947824,91+-88710101710, 91+-9644827824,91+-9826494824<i
+            class=""
+          ></i
+          ><br /><br />
+          <i class="fa-solid fa-envelope text-warning fs-3"></i>
+          info@indorearena.com<br /><br />
+        </div>
+        <div
+          class="col-lg-4 p-3 border border-4 rounded border-warning ms-auto text-light"
+        >
+          <h2>Get In Touch !</h2>
+          <p class="text text-light">We are always ready to assit you</p>
+          <form class="needs-validation">
+            <div class="mb-3 col-lg-8">
+              <input
+                type="text"
+                class="form-control is-valid"
+                value=""
+                placeholder="NAME :"
+                required
+              />
+            </div>
+            <div class="mb-3 col-lg-8">
+              <input
+                type="email"
+                class="form-control is-invalid"
+                id="exampleInputEmail1"
+                placeholder="E-mail :"
+                required
+              />
+            </div>
+            <div class="mb-3 col-lg-8">
+              <input
+                type="phone"
+                class="form-control"
+                placeholder="Phone-number :"
+              />
+            </div>
+            <div class="mb-3 col-lg-8">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="City :"
+                required
+              />
+              <div class="invalid-tooltip">Please provide a valid city.</div>
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-outline-warning">
+              Send
+            </button>
+          </form>
+        </div>
+      </footer>
+    </div>
+    <script src="bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="bootstrap-5.2.2-dist/js/owl.carousel.min.js"></script>
+    <script src="bootstrap-5.2.2-dist/js/main.js"></script>
+  </body>
+</html>

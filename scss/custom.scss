@@ -1,0 +1,558 @@
+
+$warning:#cf9c63;
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    font-family: 'poppins' ,sans-serif;
+}
+.navbar{
+    background-color: #232222;
+    border-bottom: 2px solid #cf9c63;
+}
+.navbar-nav .nav-link.active{
+    color:#cf9c63;
+}
+.navbar-nav .nav-link{
+    color: #fff;
+}
+.navbar-nav .nav-link:hover{
+    color:#cf9c63;
+}
+.img_div{position: relative;
+ 
+}
+.img_div img{
+    position: relative;
+    z-index: 33;
+    width: 70%;
+    border-radius: 5%;
+}
+.img_div:before{
+    content: '';
+    position: absolute;
+    border-radius: 3%;
+   
+     width:70%;
+     height: 100%;
+     right: 240px;
+     bottom: 35px;
+     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+     radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+    
+// bottom: 65px;
+// right: 880px;
+.banner{
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color:#232222;
+}
+.intro h3{
+    color: #fff;
+    font-size: 35px;
+     margin-left: 10px;
+   font-weight: normal;
+}
+.intro h1{
+    color: #fff;
+    font-size: 60px;
+   font-weight: 700;
+ margin-top: 20px;
+ margin-bottom: 10px;
+}
+.intro{
+    margin-left: 35px;
+}
+.wrapper{
+    display: inline-flex;
+}
+.wrapper .stick-text{
+    color:#fff;
+    font-size: 39px;
+    font-weight: 400;
+}
+.wrapper .daynamic-text{
+    margin-left: 15px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+    -webkit-box-reflect: below -35px linear-gradient(transparent,#0002);
+
+}
+.wrapper .daynamic-text li{
+    color:#cf9c63;
+    list-style: none;
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+    top:0;
+    animation: slide 8s steps(4) infinite;
+}
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+.daynamic-text li span{
+    position: relative;  
+}
+.daynamic-text li span::after{
+    content: "";
+    position:absolute;
+    height:100%;
+    width:100%;
+    left:0;
+    top:2px;
+    background-color:#232222;
+    border-left: 2px solid #cf9c63;
+    animation: typing 2.0s steps(16) infinite;
+}
+@keyframes typing{
+    100%{
+        left:100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+.text_a_div{
+    line-height: 30px;
+}
+.text_a_div p{
+    color: #686868;
+}
+.text_a_div h3{
+    color: #cf9c63;
+    margin-bottom: 10px;
+}
+.personal_info li span{
+    color: #cf9c63;
+
+}
+.personal_info li{
+    margin-bottom: 10px;
+    color: #686868;
+}
+.personal_info{
+    list-style: none;
+}
+.myimg img{
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 3%;
+    transition:all 1s;
+}
+.myimg img:hover{
+    transform: scale(1.03);
+}
+    .my_skill_bar{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border:2px solid #fff;
+       
+        border-radius: 10px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        padding: 25px 30px;
+    }
+    .my_skill_bar .bar{
+        margin: 20px 0;
+    }
+    .my_skill_bar .bar:first-child{
+        margin-top: 0;
+    }
+    .my_skill_bar .bar .info {
+        margin-bottom: 5px;
+    }
+    .my_skill_bar .bar .info span{
+        font-size: 20px;
+        color: #fff;
+        font-weight: 600;
+        opacity: 0;
+        animation: showText1 0.5s 1s linear forwards;
+    }
+    @keyframes showText1{
+        100%{
+            opacity: 1;
+        }
+    }
+    
+    .my_skill_bar  .bar .progress-line{
+        position: relative;
+        height: 10px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+        transform: scale(0);
+        transform-origin: left;
+        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),0px 1px rgba(255,255,255,0.08);
+        animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    }
+    .bar .progress-line span{
+        height: 100%;
+        width: 80%;
+        background-color: #cf9c63;
+        position: absolute;
+        border-radius: 10px;
+        transform: scale(0);
+        transform-origin: left;
+        animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+
+    }
+    @keyframes animate{
+        100%{
+            transform: scaleX(1);
+        }
+    }
+    .progress-line.html span{
+        width: 95%;
+            }
+            .progress-line.css span{
+                width: 85%;
+                    } .progress-line.bootstrap span{
+                        width: 90%;
+                            } .progress-line.java span{
+                                width: 70%;
+                                    }
+    .bar .progress-line span::before{
+        position: absolute;
+        content: '';
+        right: 0;
+        top: -10px;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-bottom-width:0px ;
+        border-right-width: 0px;
+        border-top-color:#000 ;
+        opacity: 0;
+        animation: showText 0.5s 1.5s linear forwards;
+    }
+    @keyframes showText{
+        100%{
+            opacity: 1;
+        }
+    }
+    .bar .progress-line span::after{
+        position: absolute; 
+        right: 0;
+        top: -28px;
+       color: #fff;
+       font-size: 12px;
+       font-weight: 500;
+       background-color: #000;
+       padding: 1px 8px;
+       border-radius: 3px;
+
+       
+    }
+    .progress-line.html span::after{content: "95%"; }
+ .progress-line.css span::after{content: "85%"; }
+ .progress-line.bootstrap span::after{ content: "80%"; } 
+   .progress-line.java span::after{  content: "70%"; }
+
+
+                            // web-portfolio
+                            .item{
+                                position: relative;
+                                width: 400px;
+                                height: 400px;
+                                
+                                
+                              }
+                            .web-img{
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                               transition: all 1s;
+                               
+                                border-radius: 10px;
+                                border: 2px solid #cf9c63;
+                            }
+                              .item .button{
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                z-index: 99;  
+                                display: grid;
+                                place-items: center;
+                        
+                        }
+                            .hover-div{
+                                position: absolute;
+                                z-index: 33;
+                                width: 100%;
+                                height: 0%;
+                                opacity: 0.3;
+                                border-radius: 10px;
+                                background-color:#cf9c63;
+                                transition: all 0.5s;
+                            }
+                           .item .button a{
+                               border: 2px solid #fff;
+                               display: none;
+                               font-size: 25px;
+                               font-weight:bold;
+                            }
+                            .item .button:hover a{
+                                display: block;
+                               
+                            }
+                            .item:hover .hover-div{
+                                height: 100%;
+                            }
+                            .item:hover .web-img{
+                                transform: scale(1.02);
+                                overflow: hidden;
+                            }
+                            .resume-text h2{
+                                margin-left: 32px;
+                                color: #cf9c63;
+                            }
+                            .resume-text{
+                                line-height: 70px;
+                            }
+                            .school{
+                                position: relative;
+                                
+                                
+                            }
+                            .year{
+                                width: 100px;
+                                 height: 50px;
+                                 color: #cf9c63;
+                                display: flex;
+                                position: absolute;
+                                 left: 30px;
+                                 top: -25px;
+                                 justify-content: center;
+                                 align-items: center;
+                                 font-size: 23px;
+                                 background-color: #312e2e;
+                                 border-radius: 3px;
+                            }
+                            .resume-text{
+                                border: 3px solid #686868 ;
+                                border-radius: 10px;
+                                padding-top: 2%;
+                                box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+                            }
+                            .resume-text:hover{
+                                border: 3px solid #cf9c63;
+                            }
+                            .details p{
+                                color:#686868;
+                                font-size: 18px;
+                                margin-left: 32px;
+
+                            }
+                            .details h3{
+                                color: #fff;
+                                margin-left: 32px;
+
+                            }
+                            .details h4{
+                                color: #cf9c63;
+                                margin-left: 32px;
+
+                            }
+                            .modal-body{
+                                width: 500px;
+                                height: 600px;
+                            }
+
+                            .graphic-skill{
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+                            }
+
+                            .graphic-skill .card{
+                                position: relative;
+                                width: 200px;
+                                height: 250px;
+                                display: flex;
+                                border-radius: 15px;
+                                border: 2px solid #686868;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: #2a2a2a;
+                                transition: all 1s;
+                            }
+
+                            .graphic-skill .card:hover{
+                                border: 2px solid #cf9c63;
+                                transform: scale(1.04);
+                            }
+                            .graphic-skill .card  .percent{
+                                position: relative;
+                               
+                                width: 150px;
+                                height: 150px;
+                                --num:85; 
+                            }
+                            @import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Source+Sans+Pro:wght@600&display=swap');
+                            .graphic-skill .card h1{
+                                margin-top: 20px;
+                                color: #fff;
+                                font-size:25px ;
+                                font-weight: bold;
+                                font-family: 'Alkalami', serif;
+                                font-family: 'Source Sans Pro', sans-serif;
+                            }
+                            .graphic-skill .card  .percent svg{
+                                position: relative;
+                                width: 150px;
+                                height: 150px;
+                                transform: rotate(270deg);
+
+                            }
+                            .graphic-skill .card  .percent svg circle{
+                                width: 100%;
+                                height: 100%;
+                                fill: transparent;
+                                stroke: #222222;
+                                stroke-width: 2;
+                                transform: translate(5px,5px);
+                            }
+                            .graphic-skill .card  .percent svg circle:nth-child(2){
+                                stroke: rgb(248, 133, 2);
+                                stroke-dasharray: 440; 
+                                stroke-dashoffset: calc(440 - (440 *var(--num))/100);
+                                opacity: 0;
+                                animation: fade 1s linear forwards;
+                                animation-delay: 2s;
+                            }
+                            @keyframes fade{
+                                0%{
+                                    opacity: 0;
+                                }
+                                100%{
+                                    opacity: 1;
+                                }
+                            }
+
+                            .dot{
+                                position: absolute;
+                                inset: 5px;
+                                z-index: 10;
+                              animation: animateDot 2s linear forwards;
+                            }
+                            @keyframes animateDot{
+                                0%{
+                                    transform: rotate();
+                                }
+                                100%{
+                                    transform: rotate(calc(3.6deg * var(--num)));
+
+                                }
+                            }
+                            .dot::before{
+                                content: '';
+                                position: absolute;
+                                top: -5px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                box-shadow: 0 0 10px rgb(248, 133, 2);
+                                background-color: rgb(248, 133, 2);
+                            }
+                            .number{
+                                position: absolute;
+                                inset: 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                opacity: 0;
+                                animation: fade 1s linear forwards;
+                                animation-delay: 2.5s;
+                            }
+                            .number h2{
+                                color: #cf9c63;
+                                font-size: 2.5rem;
+                                font-weight: bold;
+                            }
+                            .number h2 span{
+                                font-size: 1.5rem;
+                                font-weight: 300;
+                                color: #686868;
+                            }
+
+                            .animate-button{
+                                animation: animateBTn 1s linear infinite ;
+                            }
+                            @keyframes animateBTn{
+                                0%{
+                                    transform: scale(1);
+                                    
+                                }
+                                100%{
+                                    transform: scale(1.03);
+                                    color: #fff;
+                                  
+                                }
+                            }
+                            .animate-button:hover{
+                                animation: none;
+                            }
+                            .footer{
+                                background-color: #2a2a2a;
+                            }
+                            .footer .col-12 span{
+                                color: #cf9c63;
+                            }
+                            .footer-text span a{
+                                color: #cf9c63;
+                                text-decoration: none;
+                            }
+                            .footer-text span:hover a{
+                                color: #fff;
+                            }
+                           
+                            @media screen and (max-width: 480px) {
+                               .intro h1{
+                                color: #fff;
+                                font-size: 30px;
+                               font-weight: 700;
+                             margin-top: 10px;
+                             margin-bottom: 5px;
+                                }
+                                .intro h3{
+                                    color: #fff;
+                                    font-size: 20px;
+                                 margin-left: 5px;
+                                   font-weight: normal;
+                                }
+                              .wrapper  .stick-text{ font-size:20px;
+                                margin-top: 7%;
+                                text-align: center;
+                            }
+                            .wrapper .daynamic-text li{
+                                font-size: 30px;
+                                
+                            }
+                           
+                            .banner{
+                                min-height: 70vh;
+                            }
+                            .img_div {
+                                display: flex;
+                                justify-content: center;
+                            }
+                            .img_div:before{
+                                content: '';
+                                width: 70%;
+                                right: 85px;
+                            }
+                            
+                        
+                              }
+                              
